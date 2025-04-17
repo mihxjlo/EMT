@@ -2,7 +2,7 @@ package mk.finki.ukim.mk.airbnb.service.impl;
 
 import mk.finki.ukim.mk.airbnb.dto.AccommodationDto;
 import mk.finki.ukim.mk.airbnb.models.domain.Accommodation;
-import mk.finki.ukim.mk.airbnb.repository.AccomodationRepository;
+import mk.finki.ukim.mk.airbnb.repository.AccommodationRepository;
 import mk.finki.ukim.mk.airbnb.service.AccommodationService;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 @Service
 public class AccommodationServiceImpl implements AccommodationService {
 
-    private final AccomodationRepository accommodationRepository;
+    private final AccommodationRepository accommodationRepository;
 
-    public AccommodationServiceImpl(AccomodationRepository accommodationRepository) {
+    public AccommodationServiceImpl(AccommodationRepository accommodationRepository) {
         this.accommodationRepository = accommodationRepository;
     }
 

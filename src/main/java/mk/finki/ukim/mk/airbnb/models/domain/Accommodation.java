@@ -19,10 +19,22 @@ public class Accommodation {
     @JoinColumn(name="host_id")
     private Host host;
 
+    @ManyToOne
+    @JoinColumn(name="country_id")
+    private Country country;
+
     private Integer numRooms;
     private boolean isRented = false;
-    
+
+
+
+
+
     // Manual getters
+    public Country getCountry() {
+        return country;
+    }
+
     public Long getId() {
         return id;
     }
@@ -55,7 +67,9 @@ public class Accommodation {
     public void setName(String name) {
         this.name = name;
     }
-    
+    public void setCountry(Country country) {
+        this.country = country;
+    }
     public void setCategory(AccommodationType category) {
         this.category = category;
     }
@@ -69,6 +83,13 @@ public class Accommodation {
     }
     
     public void setRented(boolean isRented) {
+        this.isRented = isRented;
+    }
+
+    public boolean getIsRented() {
+        return isRented;
+    }
+    public void setIsRented(boolean isRented) {
         this.isRented = isRented;
     }
 }
