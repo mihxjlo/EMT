@@ -35,7 +35,7 @@ public class Accommodation {
         return country;
     }
 
-    public Long getId() {
+   public Long getId() {
         return id;
     }
     
